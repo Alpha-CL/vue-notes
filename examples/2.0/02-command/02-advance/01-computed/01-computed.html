@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <script src="../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<!--================================================================================================================-->
+
+
+<div id="app">
+
+    <!-- computed 仅调用了 1 次 -->
+    <h3>my name is {{ fullName }}</h3>
+    <h3>my name is {{ fullName }}</h3>
+    <h3>my name is {{ fullName }}</h3>
+
+    <!-- method 调用了  3次 -->
+    <h3>my name is {{ getFullName() }}</h3>
+    <h3>my name is {{ getFullName() }}</h3>
+    <h3>my name is {{ getFullName() }}</h3>
+
+    <button @click="setNewName('beta','roll')">change name</button>
+    <button @click="fullName='beta_roll'">change name</button>
+
+</div>
+
+
+<!--================================================================================================================-->
+<script>
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/**
+ * computed
+ *
+ *
+ ** 仅关注 "依赖项"，若 "依赖项" 没有变，则会返回 上一次计算的 缓存结果
+ */
+
+
+// 完整的计算属性书写
+//
+// computed: {
+// 	    propName: {
+// 	    	get() {
+// 	    		// getter
+// 	    	},
+// 	    	set(val) {
+// 	    		// setter
+// 	    	}
+// 	    }
+// }
+
+
+// 只包含 getter 的计算属性简写
+//
+// computed: {
+// 	    propName(){
+// 	    	// getter
+// 	    }
+// }
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+/**
+ * computed vs method
+ *
+ *
+ ** computed:                           // 计算属性本质上是包含 getter 和 setter 的对象
+ *
+ *      含义: 设置/获取 一个 数据
+ *
+ *      - 有固定参数
+ *
+ *      - 缓存执行结果，依赖项不变，则直接返回缓存结果
+ *
+ *
+ ** method:                              // 相较于浪费性能开销
+ *
+ *      含义: 处理一个事情
+ *
+ *      - 无固定参数
+ *
+ *      - 无缓存结果，页面重新渲染，会再次执行 method
+ */
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+const vm = new Vue({
+
+	el: '#app',
+	data: {
+		firstName: 'Alpha',
+		lastName: 'Go',
+	},
+	computed: {
+		fullName: {
+
+			get() {
+
+				console.log('[computed called]');
+				return `${this.firstName}_${this.lastName}`;
+			},
+			set(val) {
+
+				// console.log(val);
+
+				const res = val.split('_');
+
+				// console.log(res);
+
+				this.firstName = res[0];
+				this.lastName = res[1];
+			},
+		}
+	},
+	methods: {
+
+		getFullName() {
+			console.log('[method called]');
+
+			return `${this.firstName}_${this.lastName}`;
+		},
+
+		setNewName(fn,ln) {
+
+			this.firstName = fn;
+			this.lastName = ln;
+		}
+	}
+});
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</script>
+
+
+</body>
+</html>

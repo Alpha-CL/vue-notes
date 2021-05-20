@@ -1,0 +1,300 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// base color( white -> gray -> black )
+
+$white: #fff !default;
+$gray-100: rgba(242, 242, 247) !default;
+$gray-200: rgba(229, 229, 234) !default;
+$gray-300: rgba(209, 209, 214) !default;
+$gray-400: rgba(199, 199, 204) !default;
+$gray-500: rgba(174, 174, 178) !default;
+$gray-600: rgb(147, 147, 140) !default;
+$gray-700: #999 !default;
+$gray-800: #666 !default;
+$gray-900: #333 !default;
+$black: #000 !default;
+
+
+$grays: () !default;
+$grays: map-merge(
+(
+"100": $gray-100,
+"200": $gray-200,
+"300": $gray-300,
+"400": $gray-400,
+"500": $gray-500,
+"600": $gray-600,
+"700": $gray-700,
+"800": $gray-800,
+"900": $gray-900
+),
+$grays
+);
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+// reset predefined colors
+
+$blue: rgba(0, 122, 255) !default;
+$green: rgba(52, 199, 89) !default;
+$indigo: rgba(88, 86, 214) !default;
+$orange: rgba(255, 149, 0) !default;
+$pink: rgba(255, 45, 85) !default;
+$purple: rgba(175, 82, 222) !default;
+$red: rgba(255, 59, 48) !default;
+$teal: rgba(90, 200, 250) !default;
+$cyan: rgba(23, 162, 184) !default;
+$yellow: rgba(255, 204, 0) !default;
+
+$colors: () !default;
+$colors: map-merge(
+(
+"blue": $blue,
+"green": $green,
+"indigo": $indigo,
+"orange": $orange,
+"pink": $pink,
+"purple": $purple,
+"red": $red,
+"teal": $teal,
+"cyan": $cyan,
+"yellow": $yellow,
+"white": $white,
+"gray": $gray-400,
+"gray-dark": $gray-600,
+"black": $black,
+),
+$colors
+);
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+// predefined status colors
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+(
+"primary": $primary,
+"secondary": $secondary,
+"success": $success,
+"info": $info,
+"warning": $warning,
+"danger": $danger,
+"light": $light,
+"dark": $dark
+),
+$theme-colors
+);
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+// predefined information clolors
+
+
+$info-black-level_01: $gray-900 !default;
+$info-black-level_02: $gray-800 !default;
+$info-black-level_03: $gray-700 !default;
+$info-black-level_04: $gray-400 !default;
+
+
+$info-white-level_01: $white !default;
+$info-white-level_02: desaturate($white, 15%) !default;
+$info-white-level_03: desaturate($white, 30%) !default;
+$info-white-level_04: desaturate($white, 45%) !default;
+
+
+$titile: $info-black-level_01 !default;
+$sub-title: $info-black-level_02 !default;
+$headline: $info-black-level_01 !default;
+$sub-head: $info-black-level_02 !default;
+
+
+$info-body: $info-black-level_02 !default;
+
+$callout: $gray-700 !default;
+$footnote: $gray-700 !default;
+$caption: $gray-700 !default;
+
+
+$seperator: $gray-300 !default;
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+// predefined text space
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+                (
+                        0: 0,
+                        1: ($spacer * .25),
+                        2: ($spacer * .5),
+                        3: $spacer,
+                        4: ($spacer * 1.5),
+                        5: ($spacer * 3)
+                ),
+                $spacers
+);
+
+
+//-------------------------------------------------------------------------------------------------------------------//
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
+
+
+//-------------------------------------------------------------------------------------------------------------------//
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $white !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+
+//-------------------------------------------------------------------------------------------------------------------//
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height: 1.5 !default;
+
+
+$border-width: 1px !default;
+$border-color: $gray-300 !default;
+
+$border-radius: .25rem !default;
+$border-radius-lg: .3rem !default;
+$border-radius-sm: .2rem !default;
+
+
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow: 0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($black, .175) !default;
+
+
+$component-active-color: $white !default;
+$component-active-bg: theme-color("primary") !default;
+
+
+$caret-width: .3em !default;
+$caret-vertical-align: $caret-width * .85 !default;
+$caret-spacing: $caret-width * .85 !default;
+
+
+$transition-base: all .2s ease-in-out !default;
+$transition-fade: opacity .15s linear !default;
+$transition-collapse: height .35s ease !default;
+
+
+//-------------------------------------------------------------------------------------------------------------------//
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
+
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+
+
+//-------------------------------------------------------------------------------------------------------------------//
+
+
+// Utilities
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+$overflows: auto, hidden !default;
+$positions: static, relative, absolute, fixed, sticky !default;
+$user-selects: all, auto, none !default;
+
+
+$flex-dir: row-reverse, column, row-reverse, row !default;
+$flex-wrap: nowrap, wrap-reverse, wrap !default;
+$flex-main: start, space-between, space-around, space-evenly, center !default;
+$flex-sub: start, stretch, end, center !default;
+
+
+$flex-start: start;
+$flex-stretch: stretch;
+$flex-end: end;
+$flex-center: center;
+$flex-around: 'space-around';
+$flex-between: 'space-between';
+
+$flex-dirs: () !default;
+$flex-dirs: map-merge(
+(
+'start': $flex-start,
+'center': $flex-center,
+'end': $flex-end,
+'stretch': $flex-stretch,
+'around': $flex-around,
+'between': $flex-between,
+),
+$flex-dirs
+);
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

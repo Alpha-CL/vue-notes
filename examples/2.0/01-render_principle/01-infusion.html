@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<!--================================================================================================================-->
+
+
+<div id="app"></div>
+
+
+<!--================================================================================================================-->
+<script>
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/**
+ * vm <= new Vue(config);
+ *
+ *
+ *
+ ** $[member]: 可供开发者调用的方法及属性
+ *
+ ** [member]: 从 config 中注入的数据
+ *
+ ** _[member]: 仅供 vue 使用的内部方法及属性
+ */
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+
+const vm = new Vue({
+
+    el: '#app',
+
+    data: {
+
+    	vueData: 'vue-data',
+    },
+
+    computed: {
+
+		vueComputed() {
+
+		}
+    },
+
+    methods: {
+
+		vueMethod() {
+
+		}
+    }
+});
+
+
+//-------------------------------------------------------------------------------------------------------------------//
+
+
+//
+//
+/** 部分实用的方法和属性 **/
+//
+// $attrs: (...)
+// $children: []
+// $createElement: ƒ (a, b, c, d)
+// $el: div#app
+// $listeners: (...)
+// $options: {components: {…}, directives: {…}, filters: {…}, el: "#app", _base: ƒ, …}
+// $parent: undefined
+// $refs: {}
+// $root: Vue {_uid: 0, _isVue: true, $options: {…}, _renderProxy: Proxy, _self: Vue, …}
+// $scopedSlots: {}
+// $slots: {}
+// $vnode: undefined
+//
+//
+/** 从配置中注入的成员 **/
+//
+// vueComputed: (...)
+// vueData: (...)
+// vueMethod: ƒ ()
+//
+//
+/** vue 内部成员 **/
+//
+// _c: ƒ (a, b, c, d)
+// _computedWatchers: {vueComputed: Watcher}
+// _data: {__ob__: Observer}
+// _directInactive: false
+// _events: {}
+// _hasHookEvent: false
+// _inactive: null
+// _isBeingDestroyed: false
+// _isDestroyed: false
+// _isMounted: true
+// _isVue: true
+// _renderProxy: Proxy {_uid: 0, _isVue: true, $options: {…}, _renderProxy: Proxy, _self: Vue, …}
+// _self: Vue {_uid: 0, _isVue: true, $options: {…}, _renderProxy: Proxy, _self: Vue, …}
+// _staticTrees: null
+// _uid: 0
+// _vnode: VNode {tag: "div", data: {…}, children: undefined, text: undefined, elm: div#app, …}
+// _watcher: Watcher {vm: Vue, deep: false, user: false, lazy: false, sync: false, …}
+// _watchers: (2) [Watcher, Watcher]
+//
+//
+/** 部分实用的方法和属性 **/
+//
+// $data: (...)
+// $isServer: (...)
+// $props: (...)
+// $ssrContext: (...)
+// get $attrs: ƒ reactiveGetter()
+// set $attrs: ƒ reactiveSetter(newVal)
+// get $listeners: ƒ reactiveGetter()
+// set $listeners: ƒ reactiveSetter(newVal)
+// get vueComputed: ƒ computedGetter()
+// set vueComputed: ƒ ()
+// get vueData: ƒ proxyGetter()
+// set vueData: ƒ proxySetter(val)
+//
+//
+//
+// __proto__: Object
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</script>
+
+
+
+</body>
+</html>

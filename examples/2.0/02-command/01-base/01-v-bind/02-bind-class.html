@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <script src="../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<!--================================================================================================================-->
+
+
+<div id="app">
+
+
+    <!-- :class="string" -->
+    <div :class="'string-class'"/>
+
+    <!-- :class="variable" -->
+    <div :class="clsA"/>
+
+    <!-- :class="array" -->
+    <div :class="[clsA, clsB]"/>
+
+    <!-- :class="object" -->
+    <div :class="{A: isA, B: isB}"/>
+
+    <!-- :class="array & object mixin" -->
+    <div :class="[clsA, {A: isA, B: isB}]"/>
+
+
+</div>
+
+
+<!--================================================================================================================-->
+<script>
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/**
+ * :class="string | object | array"
+ *
+ *
+ ** vue 对绑定 class 做了特殊处理，解决了命名冲突
+ */
+
+
+// :class="string"
+// <div :class="'string-class'"/>
+
+// :class="variable"
+// <div :class="dataClass"/>
+
+// :class="array"
+// <div :class="[clsA, clsB]"/>
+
+// :class="object"
+// <div :class="[clsA, {A: isA, B: isB}]"/>
+
+// 将当前组件的 props 传递给子组件
+// <childComp v-bind="$props" />
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+const vm = new Vue({
+
+	el: '#app',
+	data: {
+		clsA: 'classA',
+		clsB: 'classB',
+		isA: true,
+		isB: false,
+	},
+	template: ``,
+});
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</script>
+
+
+</body>
+</html>

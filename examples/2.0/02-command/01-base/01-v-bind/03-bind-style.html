@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <script src="../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<!--================================================================================================================-->
+
+
+<div id="app">
+
+    <div :style="{fontSize: '20px'}"/>
+
+    <div :style="[styleObjectA, styleObjectB]"/>
+
+</div>
+
+
+<!--================================================================================================================-->
+<script>
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/**
+ * :class="object | object[]"
+ *
+ *
+ ** 属性名: camelCase | 'camel-case';
+ */
+
+// :style="object"
+// <div :style="{fontSize: '20px'}"/>
+
+// :style="array"
+// <div :style="[styleObjectA, styleObjectB]"/>
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+const vm = new Vue({
+
+	el: '#app',
+    data: {
+		styleObjectA: {
+			color: 'red'
+        },
+		styleObjectB: {
+			width: '100px'
+        },
+    },
+	template: ``,
+});
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</script>
+
+
+</body>
+</html>

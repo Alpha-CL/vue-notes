@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <script src="../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<!--================================================================================================================-->
+
+
+<div id="app">
+
+    <!-- 绑定单个html属性 -->
+    <img v-bind:src="imgSrc" alt=""/>
+
+    <!-- 动态绑定属性名 -->
+    <div v-bind:[key]="value"/>
+
+    <!-- 语法糖 v-bind: === : -->
+    <div :[key]="value"/>
+
+
+    <!-- 同时绑定多个 html属性: 此时 class 和 style 绑定不支持数组和对象 -->
+    <div v-bind="{class: 'custom-class', 'custom-prop': 'value', 'font-size': '12px'}"></div>
+
+</div>
+
+
+<!--================================================================================================================-->
+<script>
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/**
+ * v-bind: === :
+ *
+ *
+ * 动态地将一个或多个属性或组件属性绑定到表达式
+ *
+ ** 绑定的属性对应的属性值，可以使用 js (this -> vm)
+ *
+ ** 绑定 class & style 时，可支持其他类型( eg: array, object ... )
+ */
+
+
+// 绑定单个 html属性
+// <div v-bind:[attribute]="vuejs statement"/>          // [attribute]: html属性名
+
+
+// 绑定 动态属性名
+// <div v-bind:[key]="vuejs statement"/>                // [key]: 属性变量名
+
+
+// 语法糖: v-bind: === :
+// <div :[attribute]="vuejs statement" />
+
+
+// 同时绑定多个 html属性对象: 此时 class 和 style 绑定不支持数组和对象
+// <div v-bind="{class: 'custom-class', 'custom-prop': 'value', 'font-size': '12px'}"/>
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+const vm = new Vue({
+
+	el: '#app',
+    data: {
+        imgSrc: 'img url',
+        key: 'btnkey'
+    },
+	template: '',
+
+});
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</script>
+
+
+</body>
+</html>

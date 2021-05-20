@@ -1,0 +1,163 @@
+{
+  "id": "2521460",
+  "name": "my-website",
+  "font_family": "icon-",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "21524906",
+      "name": "write",
+      "font_class": "write",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "21524890",
+      "name": "notes",
+      "font_class": "notes",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "21524596",
+      "name": "empty",
+      "font_class": "empty",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "21524302",
+      "name": "code",
+      "font_class": "code",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "21524150",
+      "name": "about_me",
+      "font_class": "about_me",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "21524151",
+      "name": "arrow-right",
+      "font_class": "arrow-right",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "21524152",
+      "name": "arrow-top",
+      "font_class": "arrow-top",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "21524153",
+      "name": "arrow-down",
+      "font_class": "arrow-down",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "21524154",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "21524155",
+      "name": "arrow-left",
+      "font_class": "arrow-left",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "21524156",
+      "name": "article",
+      "font_class": "article",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "21524159",
+      "name": "error",
+      "font_class": "error",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "21524160",
+      "name": "mail",
+      "font_class": "mail",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "21524162",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "21524163",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "21524164",
+      "name": "info",
+      "font_class": "info",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "21524165",
+      "name": "msg_board",
+      "font_class": "msg_board",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "21524166",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "21524167",
+      "name": "wechart",
+      "font_class": "wechart",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "21524168",
+      "name": "warn",
+      "font_class": "warn",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "21524169",
+      "name": "success",
+      "font_class": "success",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "21524171",
+      "name": "project",
+      "font_class": "project",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    }
+  ]
+}

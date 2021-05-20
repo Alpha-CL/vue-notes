@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<!--================================================================================================================-->
+
+
+<div id="app">
+    <div>[vue-statement 权重第三]</div>
+</div>
+
+
+<!--================================================================================================================-->
+<script>
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/**
+ * vue 会根据模版渲染页面
+ *
+ *
+ * 权重: render() > config.template > vue-statement
+ *
+ ** vueTemplate 有且仅有一个 根节点
+ */
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+const vm = new Vue({
+
+	el: '#app',
+
+	template: `
+      <div>[config.template 权重第二]</div>
+    `,
+
+	render(createElement, context) {
+
+		// console.log('createElement: ', createElement);
+		// console.log('context: ', context);
+
+		return createElement('div', '[render 权重第一]');
+	}
+});
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</script>
+
+
+</body>
+</html>

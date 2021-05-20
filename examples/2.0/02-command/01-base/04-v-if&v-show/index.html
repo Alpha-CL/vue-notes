@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <script src="../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<!--================================================================================================================-->
+
+
+<div id="app">
+
+
+    <div v-if="type=== 'A'">a</div>
+    <div v-else-if="type=== 'B'">b</div>
+    <div v-else>not a/b</div>
+
+</div>
+
+
+<!--================================================================================================================-->
+<script>
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/**
+ * v-if
+ *
+ *
+ * v-if 无法添加到 <template/> 标签上，因为编译后该标签不存在
+ * v-if & v-else-if & v-else 书写的元素必须连续，否则不被识别
+ */
+
+
+// <div v-if="condition">a</div>
+// <div v-else-if="condition">b</div>
+// <div v-else>not a/b</div>
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+/**
+ * v-if statement vs v-show
+ *
+ *
+ ** 实际开发中，应根据实际情况选择使用
+ *
+ *
+ ** v-if
+ *
+ *      - 语句能够控制是否生成 vnode( 间接控制了是否生成对应的 dom )
+ *
+ *      - 只有条件为真时，才创建 虚拟节点，从而创建对应的 真实节点元素
+ *
+ *      - <div v-if="visibility: boolean">show or hide</div>
+ *
+ *          - true: <div>show or hide</div>
+ *
+ *          - false: no dom
+ *
+ *
+ ** v-show
+ *
+ *      - 始终生成 vnode( 间接导致了始终生成对应的dom )
+ *
+ *      - 主要控制指定元素的 display 属性( 无法减少节点的渲染量 )
+ *
+ *      - <div v-show="boolean">show or hide</div>
+ *
+ *          - true: <div style="display: block">show or hide</div>
+ *
+ *          - false: <div style="display: none">show or hide</div>
+ */
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+const vm = new Vue({
+
+	el: '#app',
+	data: {
+		type: 'A'
+	},
+	template: ``,
+});
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</script>
+
+
+</body>
+</html>

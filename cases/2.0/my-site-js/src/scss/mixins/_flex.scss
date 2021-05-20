@@ -1,0 +1,76 @@
+@function dir($type: row) {
+
+    @if $type == row {
+
+        @return row;
+
+    } @else if $type == col {
+
+        @return column;
+
+    } @else {
+
+        @error 'Please enter row or col';
+    }
+}
+
+@function wrap($type: now) {
+
+    @if $type == now {
+
+        @return nowrap;
+
+    } @else if $type == w {
+
+        @return wrap;
+
+    } @else {
+
+        @error 'Please enter w or now';
+    }
+}
+
+@function flexAlign($type) {
+
+    @if $type == s {
+
+        @return flex-start;
+
+    } @else if $type == c {
+
+        @return center;
+
+    } @else if $type == sb {
+
+        @return space-between;
+
+    } @else if $type == sa {
+
+        @return space-around;
+
+    } @else if $type == e {
+
+        @return flex-end;
+
+    } @else {
+
+        @error 'Please enter w, c, sb, sa, ';
+    }
+}
+
+
+@mixin flex($dir: row, $wrap: nowrap, $main, $sub) {
+    display: flex;
+    flex-flow: dir($dir) wrap($wrap);
+    @if $main {
+        justify-content: flexAlign($main);
+    }
+    @if $sub {
+        align-items: flexAlign($sub);
+    }
+}
+
+
+
+
+

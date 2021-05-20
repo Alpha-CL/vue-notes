@@ -1,0 +1,42 @@
+.bi::before {
+  display: inline-block;
+  content: "";
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' clip-rule='evenodd'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+}
+
+.message-con {
+  padding: 12px 40px 12px 18px;
+  position: fixed;
+  top: 3rem;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+  transform: translate(-50%, -50%) translateY(2rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  z-index: 1070;
+  line-height: 1.5;
+}
+.message-con-info, .message-con-success, .message-con-warn, .message-con-error {
+  color: #fff;
+}
+.message-con-info {
+  background-color: #007aff;
+}
+.message-con-success {
+  background-color: #34c759;
+}
+.message-con-warn {
+  background-color: #ffcc00;
+}
+.message-con-error {
+  background-color: #ff3b30;
+}
+.message-con i {
+  margin-right: 1rem;
+}
+
+/*# sourceMappingURL=index.module.css.map */

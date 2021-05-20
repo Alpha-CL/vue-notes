@@ -1,0 +1,17 @@
+// stylelint-disable declaration-no-important
+
+@mixin float-left() {
+    float: left !important;
+}
+
+@mixin float-right() {
+    float: right !important;
+}
+
+@mixin float-none() {
+    float: none !important;
+}
+
+@mixin float($direction: left) {
+    float: $direction;
+}

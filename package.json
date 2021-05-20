@@ -22,8 +22,10 @@
   "homepage": "https://github.com/Alpha-CL/vue-notes#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
     "element-ui": "^2.15.1",
     "jquery": "^3.6.0",
+    "mockjs": "^1.1.0",
     "vue": "^2.6.12"
   }
 }

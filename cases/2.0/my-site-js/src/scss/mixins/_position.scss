@@ -1,0 +1,30 @@
+$dir-top: top;
+$dir-right: right;
+$dir-bottom: bottom;
+$dir-left: left;
+
+$directions: () !default;
+$directions: map-merge(
+    (
+    "top": $dir-top,
+    "right": $dir-right,
+    "bottom": $dir-bottom,
+    "left": $dir-left,
+    ),
+    $directions
+);
+
+@mixin position($type: absolute, $t, $r, $b ,$l) {
+    position: $type;
+    @if $t { top: $t}
+    @if $r { right: $r}
+    @if $b { bottom: $b}
+    @if $l { left: $l}
+}
+
+
+
+
+
+
+

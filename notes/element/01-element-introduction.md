@@ -40,7 +40,7 @@ modifier    // 修饰符
     
     * 点击按钮后，按钮状态发生改变
 
-eg: class:      .block-element--modifier
+eg: class:      .block--element--modifier
 
     block:      wrap
     element:    btn

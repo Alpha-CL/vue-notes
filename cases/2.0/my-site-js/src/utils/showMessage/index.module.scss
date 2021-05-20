@@ -1,0 +1,43 @@
+@import "../../../src/scss/index";
+
+.message-con {
+    padding: 12px 40px 12px 18px;
+    position: fixed;
+    top: 3rem;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    transition: .3s;
+    transform: translate(-50%,-50%) translateY(2rem);
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    z-index: $zindex-tooltip;
+    line-height: $line-height;
+
+    &-info,
+    &-success,
+    &-warn,
+    &-error {
+        color: $white;
+    }
+
+    &-info {
+        background-color: $primary;
+    }
+
+    &-success {
+        background-color: $success;
+    }
+
+    &-warn {
+        background-color: $warning;
+    }
+
+    &-error {
+        background-color: $danger;
+    }
+
+    i {
+        margin-right: 1rem;
+    }
+}
